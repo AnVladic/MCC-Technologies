@@ -23,11 +23,13 @@ public class ReadXML {
     TreeMap<Integer,String> arr = new TreeMap<Integer,String>();
     String inputStream;
     String out;
+
     ReadXML(String inputStream, String out) throws ParserConfigurationException, SAXException, IOException, NullPointerException {
         this.inputStream = inputStream;
 
         this.out = out;
     }
+
     public void load() throws ParserConfigurationException, SAXException, IOException, NullPointerException, FileNotFoundException {
         int number;
         String name;
@@ -53,8 +55,8 @@ public class ReadXML {
         }
         finally {
         }
-
     }
+    
     void print() {
         try {
             FileWriter out =  new FileWriter(this.out);
@@ -66,5 +68,12 @@ public class ReadXML {
         catch(Exception e) {
             System.out.println(e.toString());
         }
+    }
+
+    public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
+        ReadConfig.main(args);
+        ReadXML obj = new ReadXML(ReadConfig.inXml, "data/output.txt");
+        obj.load();
+        obj.print();
     }
 }

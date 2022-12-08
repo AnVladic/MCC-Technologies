@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="windows-1251"?>
  <config>
 
- <tmi in="190829_v29854.KNP" out="out.txt" />
+ <tmi in="data/190829_v29854.KNP" out="out.txt" />
 
- <xml in="KNP-173.14.33.58.dat.xml"/>
+ <xml in="data/KNP-173.14.33.58.dat.xml"/>
 
 </config>

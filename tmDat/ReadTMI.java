@@ -36,7 +36,7 @@ public class ReadTMI {
 
     public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
         ReadConfig.main(args);
-        ReadTMI obj = new ReadTMI(ReadConfig.intmi);
+        ReadTMI obj = new ReadTMI(ReadConfig.inTmi);
         int count = obj.run();
         System.out.println("count = " + String.format("%x", count));
     }
